@@ -448,6 +448,7 @@ p {
   grid-template-columns: 1fr;
   gap: 30px;
 }
+
 /* Grayed out coming soon card */
 .project-card-simple.coming-soon {
   opacity: 0.8;
@@ -479,6 +480,7 @@ p {
   transform: none !important;
   box-shadow: none !important;
 }
+
 .project-card-simple {
   background: white;
   border-radius: 10px;
