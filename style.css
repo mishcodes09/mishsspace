@@ -674,6 +674,133 @@ p {
   z-index: 1000;
 }
 
+/* Section Wrapper */
+.skills-section {
+  background-color: #000;
+  padding: 6rem 1.5rem;
+  color: #fff;
+}
+
+/* Content Container */
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Eyebrow Text */
+.skills-eyebrow {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+/* Main Heading */
+.skills-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+/* Skills Grid */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Individual Skill Pill */
+.skill-pill {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+/* Hover State */
+.skill-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .skill-pill {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.85rem;
+  }
+}
+/* Skills Section */
+.skills-section {
+  padding: 60px 15px;
+  background-color: #fff;
+}
+
+.skills-container {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Skill pill – light, soft, editorial */
+.skill-pill {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  border-radius: 7px;
+  background-color: #f7f6f2;
+  color: #333;
+  border: 1px solid #e6e4de;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+/* Hover interaction – matches your buttons & cards */
+.skill-pill:hover {
+  background-color: #ff3b25;
+  color: #fff;
+  border-color: #000;
+  border-width: 1.5px;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 153, 0, 0.25);
+}
+
+/* Slight emphasis for "+ More" */
+.skill-pill:last-child {
+  font-weight: 600;
+  background-color: #fff;
+  border-style: dashed;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .skill-pill {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
 /* Education Section */
 .education {
   padding: 50px 15px;
@@ -736,14 +863,56 @@ p {
 }
 
 .education-content {
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: left;
-  animation: fadeIn 0.5s ease-out;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff9900, #ff3b25);
+  border-radius: 5px 0 0 5px;
+}
+
+.education-degree {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.education-school {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.education-dates {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
 }
 
 @keyframes fadeIn {
