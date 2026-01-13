@@ -201,12 +201,15 @@ body {
 .mobile-nav-links li:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .mobile-nav-links li:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .mobile-nav-links li:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .mobile-nav-links li:nth-child(4) {
   animation-delay: 0.4s;
 }
@@ -322,10 +325,12 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 /* Hero Section */
 .container {
   display: flex;
@@ -742,6 +747,7 @@ p {
     padding: 0.5rem 0.85rem;
   }
 }
+
 /* Skills Section */
 .skills-section {
   padding: 60px 15px;
@@ -920,6 +926,7 @@ p {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1130,6 +1137,7 @@ p {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1366,4 +1374,106 @@ p {
   .subtitle {
     font-size: 18px;
   }
+}
+
+/* ============================
+   Dark Mode Toggle Button
+============================ */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+#theme-toggle i {
+  font-size: 18px;
+}
+
+/* ============================
+   Dark Theme Overrides
+============================ */
+body.dark {
+  background-color: #0e0e0e;
+  color: #e5e5e5;
+}
+
+/* Text */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark .title,
+body.dark .subtitle {
+  color: #e5e5e5;
+}
+
+/* Navbar */
+body.dark .navbar,
+body.dark .mobile-nav-overlay {
+  background-color: #0e0e0e;
+}
+
+body.dark .navbar-right a,
+body.dark .name,
+body.dark .mobile-nav-links a {
+  color: #e5e5e5;
+}
+
+/* Cards */
+body.dark .project-card-simple,
+body.dark .education-card,
+body.dark .contact-item {
+  background-color: #151515;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Pills / tags */
+body.dark .tech-tag,
+body.dark .skill-pill {
+  background-color: #1f1f1f;
+  color: #ddd;
+  border-color: #333;
+}
+
+/* Sections */
+body.dark .skills-section {
+  background-color: #0e0e0e;
+}
+
+/* Buttons & links */
+body.dark .project-link.github {
+  background-color: #222;
+}
+
+body.dark .project-link {
+  background-color: #ff9900;
+  color: #000;
+}
+
+/* Tooltip */
+body.dark #hover-tooltip {
+  background-color: #222;
+}
+
+/* Toggle icon change */
+body.dark #theme-toggle {
+  background: #fff;
+  color: #000;
 }

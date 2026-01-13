@@ -1,263 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Main favicon -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Main favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+
   <!-- PNG versions for modern browsers -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  
+
   <!-- Apple devices -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  
+
   <!-- Android/Chrome -->
   <link rel="manifest" href="site.webmanifest">
-  
+
   <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#ffffff">
   <!-- =============================== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css" />
-    <title>mishsspace</title>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <title>mishsspace</title>
+</head>
 
-  <body>
-    <nav class="navbar">
-  <div class="navbar-left">
-    <a href="index.html">
-      <div class="logo"></div>
-    </a>
-    <a class="name" href="index.html">
-      <span>mishsspace</span>
-    </a>
-  </div>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html">
+        <div class="logo"></div>
+      </a>
+      <a class="name" href="index.html">
+        <span>mishsspace</span>
+      </a>
+    </div>
 
-  <!-- Hamburger Menu Button -->
-  <div class="hamburger-menu" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
-  <!-- Desktop Navigation -->
-  <ul class="navbar-right desktop-nav">
-    <li>
-      <a onclick="window.open('./assets/mihle mncunzwa cv.pdf')">Resume</a>
-    </li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <!-- Desktop Navigation -->
+    <ul class="navbar-right desktop-nav">
+      <li>
+        <a onclick="window.open('./assets/mihle mncunzwa cv.pdf')">Resume</a>
+      </li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  <!-- Mobile Navigation Overlay -->
-  <div class="mobile-nav-overlay" id="mobileNav">
-    <div class="mobile-nav-content">
-      <div class="mobile-nav-header">
-        <div class="mobile-logo">mishsspace</div>
-        <button class="close-menu" id="closeMenu">
-          <i class="fas fa-times"></i>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-header">
+          <div class="mobile-logo">mishsspace</div>
+          <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li>
+            <a onclick="window.open('./assets/mihle mncunzwa cv.pdf'); closeMobileNav();">Resume</a>
+          </li>
+          <li><a href="#projects" onclick="closeMobileNav();">Projects</a></li>
+          <li><a href="#about" onclick="closeMobileNav();">About</a></li>
+          <li><a href="#contact" onclick="closeMobileNav();">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <div class="mobile-social-links">
+            <a href="mailto:mishasmicrosoft@gmail.com" class="mobile-social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="mobile-social-link" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/mishcodes09" class="mobile-social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <img class="hero-image" src="images/mishs-2.jpg" alt="mishs-cover-img" width="400" height="400" />
+    <div class="text-and-circles">
+      <div class="section-text">
+        <p class="heading">Hi! I'm Mihle Mncunzwa</p>
+        <h2>Junior <span style="font-family: 'Instrument Serif', serif; font-style: italic;">Frontend</span> Developer
+        </h2>
+        <p>
+          Bringing the sass to software and the flair to functionality.
+        </p>
+      </div>
+
+      <div class="circles">
+        <button id="circle" class="circle1" onclick="window.open('./assets/mihle mncunzwa cv.pdf')">
+          Resume
         </button>
-      </div>
-      <ul class="mobile-nav-links">
-        <li>
-          <a onclick="window.open('./assets/mihle mncunzwa cv.pdf'); closeMobileNav();">Resume</a>
-        </li>
-        <li><a href="#projects" onclick="closeMobileNav();">Projects</a></li>
-        <li><a href="#about" onclick="closeMobileNav();">About</a></li>
-        <li><a href="#contact" onclick="closeMobileNav();">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <div class="mobile-social-links">
-          <a href="mailto:mishasmicrosoft@gmail.com" class="mobile-social-link">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="mobile-social-link" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/mishcodes09" class="mobile-social-link" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
+        <a href="#projects">
+          <div id="circle" class="circle2">Projects</div>
+        </a>
+        <a href="#contact">
+          <div id="circle" class="circle3">Contact</div>
+        </a>
       </div>
     </div>
   </div>
-</nav>
+  </div>
 
-    <div class="container">
-      <img class="hero-image"
-        src="images/mishs-2.jpg"
-        alt="mishs-cover-img"
-        width="400"
-        height="400"
-      />
-      <div class="text-and-circles">
-        <div class="section-text">
-          <p class="heading">Hi! I'm Mihle Mncunzwa</p>
-          <h2>Junior <span style="font-family: 'Instrument Serif', serif; font-style: italic;">Frontend</span> Developer</h2>
-          <p>
-            Bringing the sass to software and the flair to functionality.
-          </p>
-        </div>
-
-        <div class="circles">
-                <button id="circle" class="circle1" onclick="window.open('./assets/mihle mncunzwa cv.pdf')">
-                    Resume
-                </button>
-                <a href="#projects">
-                    <div id="circle" class="circle2">Projects</div>
-                </a>
-                <a href="#contact">
-                    <div id="circle" class="circle3">Contact</div>
-                </a>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <section id="projects" class="projects-section-simple">
+  <section id="projects" class="projects-section-simple">
     <div class="subtitle">[Projects]</div>
     <div class="title" style="margin-bottom: 50px;">Take a look at my recents </div>
 
     <div class="projects-grid">
-      
-        <!-- Project 1 -->
-        <div class="project-card-simple proj1">
-            <div class="project-image">
-                <img src="images/strter (1).jpg" alt="starter" height="200px">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title-simple">Starter Stack</h3>
-                <p class="project-description-simple">
-                   A platform connecting tech graduates with career-launching opportunities.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">B2C SaaS</span>
-                    <span class="tech-tag">React (Vite)</span>
-                    <span class="tech-tag">Tailwind CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://6960a66b0216e7dee5d22139--thunderous-moxie-673439.netlify.app/" class="project-link"  target="_blank"s>View Live</a>
-                    <a href="https://github.com/mishcodes09/starterstack.git" class="project-link github"  target="_blank">GitHub</a>
-                </div>
-            </div>
+
+      <!-- Project 1 -->
+      <div class="project-card-simple proj1">
+        <div class="project-image">
+          <img src="images/strter (1).jpg" alt="starter" height="200px">
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card-simple proj2">
-            <div class="project-image">
-                <img src="images/lead.jpg" alt="starter" height="200px">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title-simple">IBM-RevenueX</h3>
-                <p class="project-description-simple">
-                    An AI-powered sales and revenue automation agent
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">AI Agent</span>
-                    <span class="tech-tag">Tailwind CSS</span>
-                    <span class="tech-tag">Firebase</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://ibm-revenuex-frontend.onrender.com/" class="project-link"  target="_blank">View Live</a>
-                    <a href="https://github.com/mishcodes09/IBM-RevenueX.git" class="project-link github"  target="_blank">GitHub</a>
-                </div>
-            </div>
+        <div class="project-content">
+          <h3 class="project-title-simple">Starter Stack</h3>
+          <p class="project-description-simple">
+            A platform connecting tech graduates with career-launching opportunities.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">B2C SaaS</span>
+            <span class="tech-tag">React (Vite)</span>
+            <span class="tech-tag">Tailwind CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://6960a66b0216e7dee5d22139--thunderous-moxie-673439.netlify.app/" class="project-link"
+              target="_blank" s>View Live</a>
+            <a href="https://github.com/mishcodes09/starterstack.git" class="project-link github"
+              target="_blank">GitHub</a>
+          </div>
         </div>
+      </div>
 
-        <!-- Project 3 -->
-        <div class="project-card-simple proj3">
-            <div class="project-image">
-                <img src="images/enda.jpg" alt="starter" height="200px">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title-simple">Edna Mode</h3>
-                <p class="project-description-simple">
-                    A tribute to Edna Mode from The Incredibles. A stylish portfolio website showcasing design skills.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">Tribute</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://mishcodes09.github.io/SheCodes-Challange/" class="project-link"  target="_blank">View Live</a>
-                    <a href="https://github.com/mishcodes09/SheCodes-Challange.git" class="project-link github"  target="_blank">GitHub</a>
-                </div>
-            </div>
+      <!-- Project 2 -->
+      <div class="project-card-simple proj2">
+        <div class="project-image">
+          <img src="images/lead.jpg" alt="starter" height="200px">
         </div>
+        <div class="project-content">
+          <h3 class="project-title-simple">IBM-RevenueX</h3>
+          <p class="project-description-simple">
+            An AI-powered sales and revenue automation agent
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">AI Agent</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ibm-revenuex-frontend.onrender.com/" class="project-link" target="_blank">View Live</a>
+            <a href="https://github.com/mishcodes09/IBM-RevenueX.git" class="project-link github"
+              target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
 
-        <div class="project-card-simple proj4 coming-soon">
-  <div class="project-image">
-    <img src="images/strter (1).jpg" alt="starter" height="200px">
-    <div class="coming-soon-label">
-      <i class="fas fa-clock"></i> Coming Soon
-    </div>
-  </div>
-  <div class="project-content">
-    <h3 class="project-title-simple">DevOps in a Box</h3>
-    <p class="project-description-simple">
-      Healthcare data visualization platform for medical professionals with real-time dashboards.
-    </p>
-    <div class="tech-tags">
-      <span class="tech-tag">Next.js</span>
-      <span class="tech-tag">Tailwind CSS</span>
-      <span class="tech-tag">DevOps</span>
-    </div>
-    <div class="project-links">
-      <button class="project-link coming-soon-btn" disabled>
-        Coming Soon
-      </button>
-    </div>
-  </div>
-</div>
-    </div>
-</section>
+      <!-- Project 3 -->
+      <div class="project-card-simple proj3">
+        <div class="project-image">
+          <img src="images/enda.jpg" alt="starter" height="200px">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title-simple">Edna Mode</h3>
+          <p class="project-description-simple">
+            A tribute to Edna Mode from The Incredibles. A stylish portfolio website showcasing design skills.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Tribute</span>
+          </div>
+          <div class="project-links">
+            <a href="https://mishcodes09.github.io/SheCodes-Challange/" class="project-link" target="_blank">View
+              Live</a>
+            <a href="https://github.com/mishcodes09/SheCodes-Challange.git" class="project-link github"
+              target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
 
-<section class="skills-section">
-  <div class="skills-container">
-    <p class="subtitle">[Skills]</p>
-    <h2 class="title" style="margin-bottom: 50px;">Check out my tech toolbox</h2>
-
-    <div class="skills-list">
-      <span class="skill-pill">HTML5</span>
-      <span class="skill-pill">CSS3</span>
-      <span class="skill-pill">JavaScript</span>
-      <span class="skill-pill">React / Vite</span>
-      <span class="skill-pill">Responsive & Accessible UI Development</span>
-      <span class="skill-pill">.NET / ASP.NET Core</span>
-      <span class="skill-pill">Git & GitHub</span>
-      <span class="skill-pill">RESTful APIs</span>
-      <span class="skill-pill">Figma</span>
-      <span class="skill-pill">Framer</span>
-      <span class="skill-pill">Webflow</span>
-      <span class="skill-pill">UX Design</span>
-      <span class="skill-pill">UI Design</span>
-      <span class="skill-pill">Design Systems</span>
-      <span class="skill-pill">Front-End Development</span>
-      <span class="skill-pill">Design Sprint</span>
-      <span class="skill-pill">Interaction Design</span>
-      <span class="skill-pill">User Testing</span>
-      <span class="skill-pill">Usability Testing</span>
-      <span class="skill-pill">UX Research</span>
-      <span class="skill-pill">No-Code</span>
-      <span class="skill-pill">+ More</span>
+      <div class="project-card-simple proj4 coming-soon">
+        <div class="project-image">
+          <img src="images/strter (1).jpg" alt="starter" height="200px">
+          <div class="coming-soon-label">
+            <i class="fas fa-clock"></i> Coming Soon
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title-simple">DevOps in a Box</h3>
+          <p class="project-description-simple">
+            Healthcare data visualization platform for medical professionals with real-time dashboards.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">DevOps</span>
+          </div>
+          <div class="project-links">
+            <button class="project-link coming-soon-btn" disabled>
+              Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-</section>
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <p class="subtitle">[Skills]</p>
+      <h2 class="title" style="margin-bottom: 50px;">Check out my tech toolbox</h2>
+
+      <div class="skills-list">
+        <span class="skill-pill">HTML5</span>
+        <span class="skill-pill">CSS3</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">React / Vite</span>
+        <span class="skill-pill">Responsive & Accessible UI Development</span>
+        <span class="skill-pill">.NET / ASP.NET Core</span>
+        <span class="skill-pill">Git & GitHub</span>
+        <span class="skill-pill">RESTful APIs</span>
+        <span class="skill-pill">Figma</span>
+        <span class="skill-pill">Framer</span>
+        <span class="skill-pill">Webflow</span>
+        <span class="skill-pill">UX Design</span>
+        <span class="skill-pill">UI Design</span>
+        <span class="skill-pill">Design Systems</span>
+        <span class="skill-pill">Front-End Development</span>
+        <span class="skill-pill">Design Sprint</span>
+        <span class="skill-pill">Interaction Design</span>
+        <span class="skill-pill">User Testing</span>
+        <span class="skill-pill">Usability Testing</span>
+        <span class="skill-pill">UX Research</span>
+        <span class="skill-pill">No-Code</span>
+        <span class="skill-pill">+ More</span>
+      </div>
+    </div>
+
+  </section>
 
 
   <section id="about" class="about-section">
@@ -265,94 +261,108 @@
     <div class="title">Get to know me a little</div>
 
     <div class="about-text">
-      Hi, I’m Mish— a computer science graduate (April) passionate about frontend development and UI/UX design. I enjoy building clean, intuitive, and visually thoughtful digital experiences that prioritize usability and clarity.  Outside of coding, I spend my time skating, painting, and training for a half marathon.
+      Hi, I’m Mish— a computer science graduate (April) passionate about frontend development and UI/UX design. I enjoy
+      building clean, intuitive, and visually thoughtful digital experiences that prioritize usability and clarity.
+      Outside of coding, I spend my time skating, painting, and training for a half marathon.
     </div>
 
     <div class="about-text" style="margin-bottom: 50px ;">
-      I believe good software should feel effortless. My frontend and UI/UX approach balances clean, maintainable code with thoughtful design to create intuitive, human-centered experiences. I value continuous improvement—refining user flows, learning new tools, and iterating on details—to build products that are simple, purposeful, and enjoyable.
+      I believe good software should feel effortless. My frontend and UI/UX approach balances clean, maintainable code
+      with thoughtful design to create intuitive, human-centered experiences. I value continuous improvement—refining
+      user flows, learning new tools, and iterating on details—to build products that are simple, purposeful, and
+      enjoyable.
     </div>
 
     <div class="image-wrapper">
       <div class="about-images">
-      <div class="image-container">
-        <img class="rotate1" src="images/flowers.jpg" alt="flowers" data-tooltip="i love painting" />
+        <div class="image-container">
+          <img class="rotate1" src="images/flowers.jpg" alt="flowers" data-tooltip="i love painting" />
+        </div>
+        <div class="image-container">
+          <img class="rotate2" src="images/mish0.jpeg" alt="mish" data-tooltip="hi, that’s me!" />
+        </div>
+        <div class="image-container">
+          <img class="rotate3" src="images/mini.jpg" alt="mini-shnauzer"
+            data-tooltip=" i really want a cute mini schnauzer" />
+        </div>
       </div>
-      <div class="image-container">
-        <img class="rotate2" src="images/mish0.jpeg" alt="mish" data-tooltip="hi, that’s me!" />
-      </div>
-      <div class="image-container">
-        <img class="rotate3" src="images/mini.jpg" alt="mini-shnauzer" data-tooltip=" i really want a cute mini schnauzer" />
-      </div>
-    </div>
 
-    <!-- Global tooltip element -->
-    <div id="hover-tooltip"></div>
+      <!-- Global tooltip element -->
+      <div id="hover-tooltip"></div>
     </div>
   </section>
 
-    <section id="education" class="education">
-  <div class="subtitle">[Education]</div>
-  <div class="title">My Journey through comp sci</div>
+  <section id="education" class="education">
+    <div class="subtitle">[Education]</div>
+    <div class="title">My Journey through comp sci</div>
 
-  <!-- Timeline Years -->
-  <div class="timeline">
-    <div class="timeline-year" data-year="2025">2025</div>
-    <div class="timeline-year" data-year="2024">2024</div>
-    <div class="timeline-year" data-year="2023">2023</div>
-    <div class="timeline-year" data-year="2022">2022</div>
-    <div class="timeline-year" data-year="2021">2021</div>
-    <div class="timeline-year" data-year="2020">2020</div>
-  </div>
-
-  <!-- Education Content Container -->
-  <div class="education-content" id="education-content">
-    <!-- Content will be dynamically inserted here -->
-    <div class="education-item">
-      <div class="education-degree">Bsc Computer & Information Science</div>
-      <div class="education-school">Varsity College</div>
-      <div class="education-dates">2023 - 2025</div>
+    <!-- Timeline Years -->
+    <div class="timeline">
+      <div class="timeline-year" data-year="2025">2025</div>
+      <div class="timeline-year" data-year="2024">2024</div>
+      <div class="timeline-year" data-year="2023">2023</div>
+      <div class="timeline-year" data-year="2022">2022</div>
+      <div class="timeline-year" data-year="2021">2021</div>
+      <div class="timeline-year" data-year="2020">2020</div>
     </div>
-  </div>
-</section>
 
-    <section id="contact" class="connect-cta">
-      <div class="subtitle">[Let's Connect]</div>
-      <div class="title">I’d love to connect with you!</div>
-      
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-label">Email</div>
-          <a href="mailto:mishasmicrosoft@gmail.com" class="contact-value">
-  mishasmicrosoft@gmail.com
-</a>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-label">LinkedIn</div>
-          <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="contact-value link" target="_blank">mihle mncunzwa</a>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-label">GitHub</div>
-          <a href="https://github.com/mishcodes09" class="contact-value link" target="_blank">mishcodes09</a>
-        </div>
-        
-        <div class="contact-item">
-  <div class="contact-label">Resume</div>
-  <button class="contact-value resume-btn" onclick="window.open('./assets/mihle mncunzwa cv.pdf')">
-    <svg class="download-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
+    <!-- Education Content Container -->
+    <div class="education-content" id="education-content">
+      <!-- Content will be dynamically inserted here -->
+      <div class="education-item">
+        <div class="education-degree">Bsc Computer & Information Science</div>
+        <div class="education-school">Varsity College</div>
+        <div class="education-dates">2023 - 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="connect-cta">
+    <div class="subtitle">[Let's Connect]</div>
+    <div class="title">I’d love to connect with you!</div>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <a href="mailto:mishasmicrosoft@gmail.com" class="contact-value">
+          mishasmicrosoft@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="contact-value link" target="_blank">mihle
+          mncunzwa</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">GitHub</div>
+        <a href="https://github.com/mishcodes09" class="contact-value link" target="_blank">mishcodes09</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">Resume</div>
+        <button class="contact-value resume-btn" onclick="window.open('./assets/mihle mncunzwa cv.pdf')">
+          <svg class="download-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="copyright-notice">
+      © Mihle Mncunzwa 2026
+    </div>
+  </section>
+
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
   </button>
-</div>
-      </div>
-      <div class="copyright-notice">
-        © Mihle Mncunzwa 2026
-      </div>
-    </section>
 
-    
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

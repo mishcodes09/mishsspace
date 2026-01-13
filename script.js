@@ -290,3 +290,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Load saved theme
+if (
+  localStorage.getItem("theme") === "dark" ||
+  (!localStorage.getItem("theme") && prefersDark)
+) {
+  document.body.classList.add("dark");
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+// Toggle theme
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  themeToggle.innerHTML = isDark
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
+});
