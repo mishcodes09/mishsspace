@@ -4,85 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Main favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- PNG versions for modern browsers -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
-  <!-- Apple devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
-  <!-- Android/Chrome -->
-  <link rel="manifest" href="site.webmanifest">
-
-  <!-- Theme color for mobile browsers -->
-  <meta name="theme-color" content="#ffffff">
-  <!-- =============================== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css" />
   <title>mishsspace</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- ── Nav ─────────────────────────────────────────────── -->
   <nav class="navbar">
     <div class="navbar-left">
-      <a href="index.html">
+      <a href="index.html" aria-label="Home">
         <div class="logo"></div>
       </a>
-      <a class="name" href="index.html">
-        <span>mishsspace</span>
-      </a>
+      <a class="name" href="index.html">mishsspace</a>
     </div>
 
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu" id="hamburger">
+    <!-- Hamburger (mobile) -->
+    <div class="hamburger-menu" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
 
-    <!-- Desktop Navigation -->
-    <ul class="navbar-right desktop-nav">
-      <li>
-        <a onclick="window.open('./assets/Mihle-Mncunzwa-.pdf')">Resume</a>
-      </li>
+    <!-- Desktop nav -->
+    <ul class="navbar-right desktop-nav" role="list">
+      <li><a href="#" onclick="window.open('./assets/Mihle-Mncunzwa-.pdf'); return false;">Resume</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNav">
+    <!-- Mobile overlay nav -->
+    <div class="mobile-nav-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
       <div class="mobile-nav-content">
         <div class="mobile-nav-header">
-          <div class="mobile-logo">mishsspace</div>
-          <button class="close-menu" id="closeMenu">
+          <span class="mobile-logo">mishsspace</span>
+          <button class="close-menu" id="closeMenu" aria-label="Close menu">
             <i class="fas fa-times"></i>
           </button>
         </div>
-        <ul class="mobile-nav-links">
-          <li>
-            <a onclick="window.open('./assets/Mihle-Mncunzwa-.pdf'); closeMobileNav();">Resume</a>
-          </li>
-          <li><a href="#projects" onclick="closeMobileNav();">Projects</a></li>
-          <li><a href="#about" onclick="closeMobileNav();">About</a></li>
-          <li><a href="#contact" onclick="closeMobileNav();">Contact</a></li>
+
+        <ul class="mobile-nav-links" role="list">
+          <li><a href="#"
+              onclick="window.open('./assets/Mihle-Mncunzwa-.pdf'); closeMobileNav(); return false;">Resume</a></li>
+          <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
+          <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
+          <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+          <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
         </ul>
+
         <div class="mobile-nav-footer">
           <div class="mobile-social-links">
-            <a href="mailto:mishasmicrosoft@gmail.com" class="mobile-social-link">
+            <a href="mailto:mishasmicrosoft@gmail.com" class="mobile-social-link" aria-label="Email">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="mobile-social-link" target="_blank">
+            <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="mobile-social-link" target="_blank"
+              rel="noopener" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/mishcodes09" class="mobile-social-link" target="_blank">
+            <a href="https://github.com/mishcodes09" class="mobile-social-link" target="_blank" rel="noopener"
+              aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -91,150 +85,82 @@
     </div>
   </nav>
 
-  <div class="container">
-    <img class="hero-image" src="images/mishs-2.jpg" alt="mishs-cover-img" width="400" height="400" />
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="container" aria-label="Introduction">
+    <img class="hero-image" src="images/mishs-2.jpg" alt="Mihle Mncunzwa" width="400" height="400" />
+
     <div class="text-and-circles">
       <div class="section-text">
         <p class="heading">Hi! I'm Mihle Mncunzwa</p>
-        <h2>Junior <span style="font-family: 'Instrument Serif', serif; font-style: italic;">Software </span> Developer
-        </h2>
-        <p>
-          Bringing the sass to software and the flair to functionality.
-        </p>
+        <h1>Junior <em style="font-family: 'Instrument Serif', serif;">Software</em> Developer</h1>
+        <p>Bringing the sass to software and the flair to functionality.</p>
       </div>
 
       <div class="circles">
-        <button id="circle" class="circle1" onclick="window.open('./assets/Mihle-Mncunzwa-.pdf')">
+        <button class="circle1"
+          style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:1px solid #000;cursor:pointer;background-color:var(--color-accent-primary);transition:background-color .3s ease;"
+          onclick="window.open('./assets/Mihle-Mncunzwa-.pdf')">
           Resume
         </button>
         <a href="#projects">
-          <div id="circle" class="circle2">Projects</div>
+          <div class="circle2"
+            style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:1px solid #000;cursor:pointer;background-color:var(--color-accent-secondary);color:#000;transition:background-color .3s ease;">
+            Projects
+          </div>
         </a>
         <a href="#contact">
-          <div id="circle" class="circle3">Contact</div>
+          <div class="circle3"
+            style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:1px solid #000;cursor:pointer;background-color:var(--color-accent-tertiary);color:#000;transition:background-color .3s ease;">
+            Contact
+          </div>
         </a>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <section id="projects" class="projects-section-simple">
-    <div class="subtitle">[Projects]</div>
-    <div class="title" style="margin-bottom: 50px;">Take a look at my recents </div>
-
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project-card-simple proj1">
-        <div class="project-image">
-          <img src="images/strter (1).jpg" alt="starter" height="200px">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title-simple">Starter Stack</h3>
-          <p class="project-description-simple">
-            A platform connecting tech graduates with career-launching opportunities.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">B2C SaaS</span>
-            <span class="tech-tag">React (Vite)</span>
-            <span class="tech-tag">Tailwind CSS</span>
-          </div>
-          <div class="project-links">
-            <a href="https://6960a66b0216e7dee5d22139--thunderous-moxie-673439.netlify.app/" class="project-link"
-              target="_blank" s>View Live</a>
-            <a href="https://github.com/mishcodes09/starterstack.git" class="project-link github"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card-simple proj2">
-        <div class="project-image">
-          <img src="images/lead.jpg" alt="starter" height="200px">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title-simple">IBM-RevenueX</h3>
-          <p class="project-description-simple">
-            An AI-powered sales and revenue automation agent
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">AI Agent</span>
-            <span class="tech-tag">Tailwind CSS</span>
-            <span class="tech-tag">Firebase</span>
-          </div>
-          <div class="project-links">
-            <a href="https://ibm-revenuex-frontend.onrender.com/" class="project-link" target="_blank">View Live</a>
-            <a href="https://github.com/mishcodes09/IBM-RevenueX.git" class="project-link github"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card-simple proj3">
-        <div class="project-image">
-          <img src="images/enda.jpg" alt="starter" height="200px">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title-simple">Edna Mode</h3>
-          <p class="project-description-simple">
-            A tribute to Edna Mode from The Incredibles. A stylish portfolio website showcasing design skills.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">Tribute</span>
-          </div>
-          <div class="project-links">
-            <a href="https://mishcodes09.github.io/SheCodes-Challange/" class="project-link" target="_blank">View
-              Live</a>
-            <a href="https://github.com/mishcodes09/SheCodes-Challange.git" class="project-link github"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card-simple proj4 coming-soon">
-        <div class="project-image">
-          <img src="images/strter (1).jpg" alt="starter" height="200px">
-          <div class="coming-soon-label">
-            <i class="fas fa-clock"></i> Coming Soon
-          </div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title-simple">DevOps in a Box</h3>
-          <p class="project-description-simple">
-            Healthcare data visualization platform for medical professionals with real-time dashboards.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">Tailwind CSS</span>
-            <span class="tech-tag">DevOps</span>
-          </div>
-          <div class="project-links">
-            <button class="project-link coming-soon-btn" disabled>
-              Coming Soon
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="skills-section" id="skills">
-    <div class="skills-container">
-      <p class="subtitle">[Skills]</p>
-      <h2 class="title" style="margin-bottom: 50px;">Check out my tech toolbox</h2>
 
-      <div class="skills-list">
+  <!-- ── Projects ─────────────────────────────────────────── -->
+  <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="projects-heading">Projects</h2>
+    </div>
+
+    <div class="filter-container" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="landing-page">Frontend</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid" role="list">
+      <!-- Injected by script.js -->
+    </div>
+
+    <div class="empty-state hidden" id="emptyState" aria-live="polite">
+      <div style="font-size: 48px; margin-bottom: 16px;">📂</div>
+      <h3 style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">No projects found</h3>
+      <p style="color: #71717a; font-size: 14px; padding: 0;">Try selecting a different category</p>
+    </div>
+  </section>
+
+
+  <!-- ── Skills ───────────────────────────────────────────── -->
+  <section class="projects-section" id="skills" aria-labelledby="projects-heading">
+    <div class="skills-container">
+      <div class="section-header">
+        <h2 class="section-title" id="projects-heading">Skills</h2>
+
+      </div>
+
+      <div class=" skills-list">
         <span class="skill-pill">HTML5</span>
         <span class="skill-pill">CSS3</span>
         <span class="skill-pill">JavaScript</span>
         <span class="skill-pill">React / Vite</span>
-        <span class="skill-pill">Responsive & Accessible UI Development</span>
+        <span class="skill-pill">Responsive &amp; Accessible UI</span>
         <span class="skill-pill">.NET / ASP.NET Core</span>
-        <span class="skill-pill">Git & GitHub</span>
+        <span class="skill-pill">Git &amp; GitHub</span>
         <span class="skill-pill">RESTful APIs</span>
         <span class="skill-pill">Figma</span>
         <span class="skill-pill">Framer</span>
@@ -243,124 +169,127 @@
         <span class="skill-pill">UI Design</span>
         <span class="skill-pill">Design Systems</span>
         <span class="skill-pill">Front-End Development</span>
-        <span class="skill-pill">Design Sprint</span>
+        <span class="skill-pill">Design Sprints</span>
         <span class="skill-pill">Interaction Design</span>
         <span class="skill-pill">User Testing</span>
-        <span class="skill-pill">Usability Testing</span>
         <span class="skill-pill">UX Research</span>
         <span class="skill-pill">No-Code</span>
-        <span class="skill-pill">+ More</span>
       </div>
     </div>
-
   </section>
 
 
-  <section id="about" class="about-section">
-    <div class="subtitle">[About]</div>
-    <div class="title">Get to know me a little</div>
+  <!-- ── About ────────────────────────────────────────────── -->
+  <section id="about" class="projects-section" aria-labelledby="projects-heading">
+    <div class="skills-container">
+      <div class="section-header">
+        <h2 class="section-title" id="projects-heading">Get to know me a little</h2>
 
-    <div class="about-text">
-      Hi, I’m Mish— a computer science graduate (April) passionate about frontend development and UI/UX design. I enjoy
-      building clean, intuitive, and visually thoughtful digital experiences that prioritize usability and clarity.
-      Outside of coding, I spend my time skating, painting, and training for a half marathon.
-    </div>
+      </div>
 
-    <div class="about-text" style="margin-bottom: 50px ;">
-      I believe good software should feel effortless. My frontend and UI/UX approach balances clean, maintainable code
-      with thoughtful design to create intuitive, human-centered experiences. I value continuous improvement—refining
-      user flows, learning new tools, and iterating on details—to build products that are simple, purposeful, and
-      enjoyable.
-    </div>
+      <p class="about-text">
+        Hi, I’m Mish — a computer science graduate (April) based in South Africa. I build
+        clean,
+        intuitive, and user-friendly digital experiences. I care about thoughtful design, smooth user
+        flows,
+        and continuously improving my craft.
+      </p>
 
-    <div class="image-wrapper">
+      <p class="about-text" style="margin-bottom: 50px;">
+        Outside of coding, I skate, draw, and learn mandarin.
+      </p>
+
       <div class="about-images">
-        <div class="image-container">
-          <img class="rotate1" src="images/flowers.jpg" alt="flowers" data-tooltip="i love painting" />
-        </div>
-        <div class="image-container">
-          <img class="rotate2" src="images/mish0.jpeg" alt="mish" data-tooltip="hi, that’s me!" />
-        </div>
-        <div class="image-container">
-          <img class="rotate3" src="images/mini.jpg" alt="mini-shnauzer"
-            data-tooltip=" i really want a cute mini schnauzer" />
-        </div>
+        <img class="rotate1" src="images/flowers.jpg" alt="Flowers" data-tooltip="i love flowers" />
+        <img src="images/zhongwen.jpg" alt="Zhongwen" data-tooltip="im learning mandarin" />
+        <img class="rotate3" src="images/skating.jpg" alt="Skateboard" data-tooltip="skating is life" />
       </div>
 
-      <!-- Global tooltip element -->
-      <div id="hover-tooltip"></div>
+      <div id="hover-tooltip" role="tooltip"></div>
+  </section>
+
+
+  <!-- ── Education ────────────────────────────────────────── -->
+  <section id="education" class="education" aria-labelledby="education-heading">
+    <div class="education-layout">
+
+      <div class="education-heading-col">
+        <h2 class="section-title" id="projects-heading">Education</h2>
+      </div>
+
+      <div class="education-entries-col">
+
+        <div class="edu-entry">
+          <div class="edu-top">
+            <h3 class="edu-degree">BSc Computer &amp; Information Science</h3>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2023 – 2025</span>
+            <span class="edu-meta-item"><i class="fas fa-graduation-cap"></i> Emeris </span>
+            <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Port Elizabeth</span>
+          </div>
+          <p class="edu-description">
+            Focused on frontend development and UI/UX design, building a strong foundation in software
+            engineering, data structures, and human-centred computing.
+          </p>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-top">
+            <h3 class="edu-degree">HCert Web &amp; Application Development</h3>
+            <span class="edu-badge">Graduated</span>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2022</span>
+            <span class="edu-meta-item"><i class="fas fa-graduation-cap"></i> Emeris</span>
+            <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Port Elizabeth</span>
+          </div>
+          <p class="edu-description">
+            Introduced to the fundamentals of web development, covering HTML, CSS, JavaScript, and basic
+            application architecture.
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section id="education" class="education">
-    <div class="subtitle">[Education]</div>
-    <div class="title">My Journey through comp sci</div>
 
-    <!-- Timeline Years -->
-    <div class="timeline">
-      <div class="timeline-year" data-year="2025">2025</div>
-      <div class="timeline-year" data-year="2024">2024</div>
-      <div class="timeline-year" data-year="2023">2023</div>
-      <div class="timeline-year" data-year="2022">2022</div>
-      <div class="timeline-year" data-year="2021">2021</div>
-      <div class="timeline-year" data-year="2020">2020</div>
+  <!-- ── Contact ──────────────────────────────────────────── -->
+  <section id="contact" class="projects-section" aria-labelledby="projects-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="projects-heading">Lets connect</h2>
     </div>
-
-    <!-- Education Content Container -->
-    <div class="education-content" id="education-content">
-      <!-- Content will be dynamically inserted here -->
-      <div class="education-item">
-        <div class="education-degree">Bsc Computer & Information Science</div>
-        <div class="education-school">Varsity College</div>
-        <div class="education-dates">2023 - 2025</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="connect-cta">
-    <div class="subtitle">[Let's Connect]</div>
-    <div class="title">I’d love to connect with you!</div>
 
     <div class="contact-info">
       <div class="contact-item">
-        <div class="contact-label">Email</div>
-        <a href="mailto:mishasmicrosoft@gmail.com" class="contact-value">
-          mishasmicrosoft@gmail.com
+        <span class="contact-label">Email</span>
+        <a href="mailto:mishasmicrosoft@gmail.com" class="contact-value">mishasmicrosoft@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="contact-value link" target="_blank" rel="noopener">
+          mihle mncunzwa
         </a>
       </div>
 
       <div class="contact-item">
-        <div class="contact-label">LinkedIn</div>
-        <a href="https://www.linkedin.com/in/mihle-mncunzwa/" class="contact-value link" target="_blank">mihle
-          mncunzwa</a>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-label">GitHub</div>
-        <a href="https://github.com/mishcodes09" class="contact-value link" target="_blank">mishcodes09</a>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-label">Resume</div>
-        <button class="contact-value resume-btn" onclick="window.open('./assets/Mihle-Mncunzwa-.pdf')">
-          <svg class="download-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-        </button>
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/mishcodes09" class="contact-value link" target="_blank" rel="noopener">
+          mishcodes09
+        </a>
       </div>
     </div>
-    <div class="copyright-notice">
-      © Mihle Mncunzwa 2026
-    </div>
+
+    <p class="copyright-notice">© Mihle Mncunzwa 2026</p>
   </section>
 
-  <button id="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fas fa-moon"></i>
-  </button>
 
+  <!-- ── Dark mode toggle ─────────────────────────────────── -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
