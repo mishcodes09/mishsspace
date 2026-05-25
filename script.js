@@ -55,21 +55,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
-
 // ── Project data ─────────────────────────────────────────────
 const projects = [
-  {
-    id: 1,
-    title: "Starter Stack",
-    category: "frontend",
-    description:
-      "A platform connecting tech graduates with career-launching opportunities.",
-    image: "images/yess.png",
-    tech: ["React", "Vite", "Tailwind"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/mishcodes09/starterstack",
-    status: "in-progress",
-  },
   {
     id: 2,
     title: "IBM-RevenueX",
@@ -89,34 +76,10 @@ const projects = [
     description:
       "A tribute to Edna Mode from The Incredibles. Stylish portfolio website.",
     image: "images/design.png",
-    tech: ["HTML", "CSS", "GSAP"],
+    tech: ["HTML", "CSS", "Figma"],
     liveUrl: "https://mishcodes09.github.io/SheCodes-Challange/",
     githubUrl: "https://github.com/mishcodes09/SheCodes-Challange",
     status: "live",
-  },
-  {
-    id: 4,
-    title: "Lefond",
-    category: "frontend",
-    description:
-      "Healthcare data visualisation platform with real-time dashboards.",
-    image: "images/lefond.png",
-    tech: ["Next.js", "Node.js", "PostgreSQL"],
-    liveUrl: "https://github.com/mishcodes09/lefond",
-    githubUrl: "https://lefond.netlify.app/https://lefond.netlify.app/",
-    status: "in-progress",
-  },
-  {
-    id: 5,
-    title: "Snipr",
-    category: "fullstack",
-    description:
-      "Productivity app for managing tasks with team collaboration features.",
-    image: "images/snipr.png",
-    tech: ["React Native", "Redux"],
-    liveUrl: "#",
-    githubUrl: "#",
-    status: "in-progress",
   },
   {
     id: 6,
@@ -127,7 +90,7 @@ const projects = [
     image: "images/mwadi.png",
     tech: ["Vue", "GSAP", "Tailwind"],
     liveUrl: "https://mwadi-portfolio.framer.media/",
-    githubUrl: "null",
+    githubUrl: null,
     status: "live",
   },
 ];
