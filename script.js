@@ -88,7 +88,7 @@ const projects = [
     description:
       "Personal portfolio with dark mode and smooth scroll animations.",
     image: "images/mwadi.png",
-    tech: ["Vue", "GSAP", "Tailwind"],
+    tech: ["Framer"],
     liveUrl: "https://mwadi-portfolio.framer.media/",
     githubUrl: null,
     status: "live",
