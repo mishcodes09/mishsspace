@@ -40,7 +40,7 @@
 
     <!-- Desktop nav -->
     <ul class="navbar-right desktop-nav" role="list">
-      <li><a href="#" onclick="window.open('./assets/Mihle-Mncunzwa-.pdf'); return false;">Resume</a></li>
+      <li><a href="#" onclick="window.open('./assets/mish-mncunzwa-final.pdf'); return false;">Resume</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#about">About</a></li>
@@ -59,7 +59,7 @@
 
         <ul class="mobile-nav-links" role="list">
           <li><a href="#"
-              onclick="window.open('./assets/Mihle-Mncunzwa-.pdf'); closeMobileNav(); return false;">Resume</a></li>
+              onclick="window.open('./assets/mish-mncunzwa-final.pdf'); closeMobileNav(); return false;">Resume</a></li>
           <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
           <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
           <li><a href="#about" onclick="closeMobileNav()">About</a></li>
@@ -100,7 +100,7 @@
       <div class="circles">
         <button class="circle1"
           style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:1px solid #000;cursor:pointer;background-color:var(--color-accent-primary);transition:background-color .3s ease;"
-          onclick="window.open('./assets/Mihle-Mncunzwa-.pdf')">
+          onclick="window.open('./assets/mish-mncunzwa-final.pdf')">
           Resume
         </button>
         <a href="#projects">
@@ -121,26 +121,14 @@
 
 
   <!-- ── Projects ─────────────────────────────────────────── -->
-  <section class="projects-section" id="projects" aria-labelledby="projects-heading">
-    <div class="section-header">
-      <h2 class="section-title" id="projects-heading">Projects</h2>
-    </div>
+  <section class="projects-section projects-showcase" id="projects" aria-labelledby="projects-heading">
+    <div class="showcase-intro">
+      <h2 class="showcase-title" id="projects-heading">My selected works</h2>
 
-    <div class="filter-container" role="group" aria-label="Filter projects by category">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="landing-page">Frontend</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      <button class="filter-btn" data-filter="design">Design</button>
     </div>
 
     <div class="projects-grid" id="projectsGrid" role="list">
       <!-- Injected by script.js -->
-    </div>
-
-    <div class="empty-state hidden" id="emptyState" aria-live="polite">
-      <div style="font-size: 48px; margin-bottom: 16px;">📂</div>
-      <h3 style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">No projects found</h3>
-      <p style="color: #71717a; font-size: 14px; padding: 0;">Try selecting a different category</p>
     </div>
   </section>
 
@@ -148,8 +136,8 @@
   <!-- ── Skills ───────────────────────────────────────────── -->
   <section class="projects-section" id="skills" aria-labelledby="projects-heading">
     <div class="skills-container">
-      <div class="section-header">
-        <h2 class="section-title" id="projects-heading">Skills</h2>
+      <div class="showcase-intro">
+        <h2 class="showcase-title" id="projects-heading">Skills</h2>
 
       </div>
 
@@ -182,8 +170,8 @@
   <!-- ── About ────────────────────────────────────────────── -->
   <section id="about" class="projects-section" aria-labelledby="projects-heading">
     <div class="skills-container">
-      <div class="section-header">
-        <h2 class="section-title" id="projects-heading">Get to know me a little</h2>
+      <div class="showcase-intro">
+        <h2 class="showcase-title" id="projects-heading">Get to know me a little</h2>
 
       </div>
 
@@ -199,66 +187,13 @@
         Outside of coding, I skate, draw, and learn mandarin.
       </p>
 
-      <div class="about-images">
-        <img class="rotate1" src="images/flowers.jpg" alt="Flowers" data-tooltip="i love flowers" />
-        <img src="images/zhongwen.jpg" alt="Zhongwen" data-tooltip="im learning mandarin" />
-        <img class="rotate3" src="images/skating.jpg" alt="Skateboard" data-tooltip="skating is life" />
-      </div>
-
-      <div id="hover-tooltip" role="tooltip"></div>
   </section>
-
-
-  <!-- ── Education ────────────────────────────────────────── -->
-  <section id="education" class="education" aria-labelledby="education-heading">
-    <div class="education-layout">
-
-      <div class="education-heading-col">
-        <h2 class="section-title" id="projects-heading">Education</h2>
-      </div>
-
-      <div class="education-entries-col">
-
-        <div class="edu-entry">
-          <div class="edu-top">
-            <h3 class="edu-degree">BSc Computer &amp; Information Science</h3>
-          </div>
-          <div class="edu-meta">
-            <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2023 – 2025</span>
-            <span class="edu-meta-item"><i class="fas fa-graduation-cap"></i> Emeris </span>
-            <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Port Elizabeth</span>
-          </div>
-          <p class="edu-description">
-            Focused on frontend development and UI/UX design, building a strong foundation in software
-            engineering, data structures, and human-centred computing.
-          </p>
-        </div>
-
-        <div class="edu-entry">
-          <div class="edu-top">
-            <h3 class="edu-degree">HCert Web &amp; Application Development</h3>
-            <span class="edu-badge">Graduated</span>
-          </div>
-          <div class="edu-meta">
-            <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2022</span>
-            <span class="edu-meta-item"><i class="fas fa-graduation-cap"></i> Emeris</span>
-            <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Port Elizabeth</span>
-          </div>
-          <p class="edu-description">
-            Introduced to the fundamentals of web development, covering HTML, CSS, JavaScript, and basic
-            application architecture.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
 
   <!-- ── Contact ──────────────────────────────────────────── -->
   <section id="contact" class="projects-section" aria-labelledby="projects-heading">
-    <div class="section-header">
-      <h2 class="section-title" id="projects-heading">Lets connect</h2>
+    <div class="showcase-intro">
+      <h2 class="showcase-title" id="projects-heading">Let's connect</h2>
+
     </div>
 
     <div class="contact-info">

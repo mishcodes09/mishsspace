@@ -63,7 +63,7 @@ const projects = [
     category: "fullstack",
     description:
       "AI-powered sales and revenue automation agent with predictive analytics.",
-    image: "images/revenue.png",
+    image: "images/4.png",
     tech: ["React", "Firebase", "AI"],
     liveUrl: "https://ibm-revenuex-frontend.onrender.com/",
     githubUrl: "https://github.com/mishcodes09/IBM-RevenueX",
@@ -71,61 +71,49 @@ const projects = [
   },
   {
     id: 3,
-    title: "Edna Mode",
-    category: "design",
+    title: "Madolo Innovative Construction",
+    category: "fullstack",
     description:
-      "A tribute to Edna Mode from The Incredibles. Stylish portfolio website.",
-    image: "images/design.png",
-    tech: ["HTML", "CSS", "Figma"],
-    liveUrl: "https://mishcodes09.github.io/SheCodes-Challange/",
-    githubUrl: "https://github.com/mishcodes09/SheCodes-Challange",
+      "Full-stack marketing site for Madolo Construction — Next.js 15, and WhatsApp",
+    image: "images/1.png",
+    tech: ["Next.js", "React", "TailwindCSS", "WhatsApp"],
+    liveUrl: "https://www.madolo.org.za/",
+    githubUrl: "https://github.com/mishcodes09/madolo-construction.git",
     status: "live",
   },
   {
     id: 6,
-    title: "Videographer Portfolio",
-    category: "design",
+    title: "Mzongwana ",
+    category: "Frontend",
     description:
-      "Personal portfolio with dark mode and smooth scroll animations.",
-    image: "images/mwadi.png",
+      "Non Profit organization website built with Framer, showcasing their mission and initiatives.",
+    image: "images/2.png",
     tech: ["Framer"],
-    liveUrl: "https://mwadi-portfolio.framer.media/",
+    liveUrl: "https://mzongwana.org/",
     githubUrl: null,
+    status: "live",
+  },
+
+  {
+    id: 6,
+    title: "Algoa Bus Redesign",
+    category: "fullstack",
+    description:
+      "Redesign & Development of Algoa Bus website, enhancing user experience and functionality.",
+    image: "images/3.png",
+    tech: ["Vue", "TailwindCSS"],
+    liveUrl: "https://sidepr.netlify.app/",
+    githubUrl: "https://github.com/mishcodes09/algoabus.git",
     status: "live",
   },
 ];
 
-// ── Projects render + filter ──────────────────────────────────
+// ── Projects render ─────────────────────────────────────────
 const projectsGrid = document.getElementById("projectsGrid");
-const filterBtns = document.querySelectorAll(".filter-btn");
-const emptyState = document.getElementById("emptyState");
 
-function renderProjects(filter = "all") {
-  const filtered =
-    filter === "all" ? projects : projects.filter((p) => p.category === filter);
-
-  if (filtered.length === 0) {
-    projectsGrid.innerHTML = "";
-    emptyState.classList.remove("hidden");
-    return;
-  }
-
-  emptyState.classList.add("hidden");
-
-  projectsGrid.innerHTML = filtered
+function renderProjects() {
+  projectsGrid.innerHTML = projects
     .map((project, index) => {
-      const overlayHtml =
-        project.status !== "coming-soon"
-          ? `<div class="project-overlay">
-           <a href="${project.liveUrl}" target="_blank" rel="noopener" class="overlay-btn" title="View live">
-             <i class="fas fa-external-link-alt"></i>
-           </a>
-           <a href="${project.githubUrl}" target="_blank" rel="noopener" class="overlay-btn" title="View code">
-             <i class="fab fa-github"></i>
-           </a>
-         </div>`
-          : "";
-
       const liveLinkHtml = project.liveUrl
         ? `<a href="${project.liveUrl}" target="_blank" rel="noopener" class="project-link primary">Live Site</a>`
         : `<span class="project-link disabled">Coming Soon</span>`;
@@ -134,36 +122,46 @@ function renderProjects(filter = "all") {
         ? `<a href="${project.githubUrl}" target="_blank" rel="noopener" class="project-link secondary">GitHub</a>`
         : `<span class="project-link disabled">Private</span>`;
 
+      const isLast = index === projects.length - 1;
+      const spanClass = projects.length % 2 !== 0 && isLast ? " span-2" : "";
+
       return `
-      <article class="project-card" data-category="${project.category}" role="listitem"
-               style="animation-delay: ${index * 0.05}s">
-        <div class="project-image">
-          <img src="${project.image}" alt="${project.title}" loading="lazy" />
-          ${overlayHtml}
-          <span class="status-badge ${project.status}">${project.status.replace("-", " ")}</span>
-        </div>
-        <p class="project-category">${project.category}</p>
-        <h3 class="project-title">${project.title}</h3>
-        <p class="project-description">${project.description}</p>
-        <div class="tech-stack">
-          ${project.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
-        <div class="project-links">
-          ${liveLinkHtml}
-          ${githubLinkHtml}
+      <article class="showcase-card reveal${spanClass}" data-category="${project.category}" role="listitem"
+               style="transition-delay: ${index * 0.08}s">
+        <img src="${project.image}" alt="${project.title}" loading="lazy" />
+        <span class="status-badge ${project.status}">${project.status.replace("-", " ")}</span>
+        <div class="showcase-caption">
+          <p class="showcase-category">${project.category}</p>
+          <h3 class="showcase-name">${project.title}</h3>
+          <p class="showcase-desc">${project.description}</p>
+          <div class="tech-stack">
+            ${project.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
+          </div>
+          <div class="showcase-links">
+            ${liveLinkHtml}
+            ${githubLinkHtml}
+          </div>
         </div>
       </article>`;
     })
     .join("");
-}
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    renderProjects(btn.dataset.filter);
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  document.querySelectorAll(".showcase-card.reveal").forEach((card) => {
+    revealObserver.observe(card);
   });
-});
+}
 
 renderProjects();
 
